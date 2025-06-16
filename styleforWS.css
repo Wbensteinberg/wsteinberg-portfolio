@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: #080808;
+    background-image:url(darknight.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* margin: 45px; */
+}
+
+.Bio{
+    /* background-color: rgb(45, 5, 138); */
+    margin-top: 90px;
+    margin-left: 135px;
+    margin-right: 135px;
+    margin-bottom: none;
+    font-size: 36px;
+    color: rgb(9, 13, 9);
+    /* border: 2px solid rgb(19, 106, 181); */
+    border-radius: 10px;
+    padding-left: 25px;
+    padding-top: 15px;
+    padding-bottom: 0px;
+    overflow: hidden;
+    color: whitesmoke;
+
+    /* display: flex; */
+     }
+
+.Bio-inner{
+    float: left;
+    margin-right: 20px;
+}
+
+.Bio p{
+    opacity: .75;
+}
+
+.Bio-inner img{
+    border-radius: 10px;
+}
+
+.Links{
+    display: flex;
+    margin-left: 154px;
+}
+.Links a{
+    display: block; /* make the linked link a block element for better spacing */
+    margin-top: 6px;
+    margin-right: 5px;
+    padding-left: 7px;
+
+    color: antiquewhite;
+    text-decoration: none;
+    font-size: 30px;
+}
+.Links button{
+    background-color: rgba(0,0,0,0);
+    border: none;
+    color: antiquewhite;
+    font-size: 30px;
+    cursor: pointer;
+}
+.Links a:hover{
+    text-decoration: underline;
+}
+
+.Project-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    /* margin-left: 159px; */
+    justify-content: center;
+}
+
+.Project-box-PNetFlix{
+    width: 200px;
+    height: 200px;
+    margin: none;
+    border: 1px solid #CCC;
+    cursor: pointer;
+    border-radius: 5px;
+    overflow: hidden;
+    color: whitesmoke;
+    margin-right: 15px;
+    margin-left: 15px;
+
+    background-image:url(PNetFlix.png);
+    background-size: cover;
+    background-position: center;
+}
+.Project-box-PNetFlix p{
+    text-align: center;
+    padding-top: 10px;
+}
+.Project-box-PeachParty{
+    width: 200px;
+    height: 200px;
+    margin: none;
+    border: 1px solid #CCC;
+    cursor: pointer;
+    border-radius: 5px;
+    overflow: hidden;
+    color: whitesmoke;
+    margin-right: 15px;
+    margin-left: 15px;
+
+    background-image:url(PE.png); 
+    background-size: cover;
+    background-position: center;
+}
+.Project-box-PeachParty p{
+    text-align: center;
+    padding-top: 10px;
+    
+}
+.Project-box-PNetFlix img{
+    object-fit: cover;
+}
+
+.Project-box-CSCO{
+    width: 200px;
+    height: 200px;
+    margin: none;
+    border: 1px solid #CCC;
+    cursor: pointer;
+    border-radius: 5px;
+    overflow: hidden;
+    color: whitesmoke;
+    margin-right: 15px;
+    margin-left: 15px;
+    background-image:url(CSCO-login.png);
+    background-size: cover;
+    background-position: center;
+}
+.Project-box-CSCO p{
+    text-align: center;
+    padding-top: 10px;
+}
+
+.Project-summary{
+    color: whitesmoke;
+    border-radius: 9px;
+    display: none; /* this is because it will be displayed only on click */
+    position: fixed;
+    top: 645px;
+    left: 50%;
+    transform: translate(-50%,-80%);
+    background-color: rgb(55, 50, 73);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    padding: 20px;
+}
+
+.Project-summary p{
+    padding: 10px;
+    opacity: .8;
+}
+.Project-summary img{
+    padding-left: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px ;
+}
+
+
+.close-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.Tennis{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+} 
+
+.Tennis video{
+    border-radius: 6px;
+    border-color: antiquewhite;
+    border-width: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+}
+
+.Tennis video:hover {
+    border-color: coral;
+    transform: scale(1.03);
+}
+
+
+
+
+
