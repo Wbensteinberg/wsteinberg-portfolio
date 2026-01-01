@@ -2,113 +2,166 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Will Steinberg Portfolio</title>
+    <title>Will Steinberg | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styleforWS.css">
 </head>
 <body>
-<div class="Bio">
-    <div class="Bio-inner">
-        <img src="linked.jpg" width="250px" height="333px">
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="profile-image-wrapper">
+                    <img src="linked.jpg" alt="Will Steinberg" class="profile-image">
+                    <div class="profile-glow"></div>
+                </div>
+                <div class="hero-text">
+                    <h1 class="hero-title">Will Steinberg</h1>
+                    <p class="hero-subtitle">Computer Science Major at UCLA | Tennis Player</p>
+                    <p class="hero-description">
+                        I'm a 21 year old tennis player and Computer Science major at UCLA, spending countless hours studying machine learning, web design and software engineering in general. I'm competing with the most brilliant minds and highest-level athletes in the country simultaneously, and I wouldn't have it any other way.
+                    </p>
+                    <div class="hero-links">
+                        <a href="https://www.linkedin.com/in/will-steinberg-5a253a262/" target="_blank" class="btn btn-primary">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                            LinkedIn
+                        </a>
+                        <a href="will_steinberg.pdf" target="_blank" download="Resume" class="btn btn-secondary">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Resume
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects-section">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card" onclick="showSummary('PNetFlix')">
+                    <div class="project-image" style="background-image: url('PNetFlix.png');"></div>
+                    <div class="project-overlay">
+                        <h3 class="project-title">PNetFlix</h3>
+                        <p class="project-subtitle">Movie Recommendation System</p>
+                        <span class="project-link">View Details →</span>
+                    </div>
+                </div>
+                <div class="project-card" onclick="showSummary('PeachParty')">
+                    <div class="project-image" style="background-image: url('PE.png');"></div>
+                    <div class="project-overlay">
+                        <h3 class="project-title">PeachParty</h3>
+                        <p class="project-subtitle">Mario Party-Inspired Game</p>
+                        <span class="project-link">View Details →</span>
+                    </div>
+                </div>
+                <div class="project-card" onclick="showSummary('CSCO')">
+                    <div class="project-image" style="background-image: url('CSCO-login.png');"></div>
+                    <div class="project-overlay">
+                        <h3 class="project-title">CSCO</h3>
+                        <p class="project-subtitle">Social Media Platform</p>
+                        <span class="project-link">View Details →</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tennis Section -->
+        <section class="tennis-section">
+            <h2 class="section-title">Tennis</h2>
+            <div class="tennis-video-wrapper">
+                <video controls class="tennis-video">
+                    <source src="tennis_2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
     </div>
-    <p class="desc">I'm Will Steinberg, a 21 year old tennis player and Computer Science major at UCLA,
-        spending countless hours studying machine learning, web design and software engineering in general.
-        I’m competing with the most brilliant minds and highest-level athletes in the country simultaneously, 
-        and I wouldn’t have it any other way. 
-        </p>
-</div>
 
-<div class="Links">
-    <a href="https://www.linkedin.com/in/will-steinberg-5a253a262/" target="_blank">
-        <strong>Linkedin</strong></a> 
-    <a href="will_steinberg.pdf" target="_blank" download="Resume">
-        <button><strong>Resume</strong></button></a>
-</div>
-
-
-
-<p style ="font-size: 38px; color: whitesmoke; text-align: center; opacity: .75;">Projects</p>
-
-<!-- Project container that displays all project boxes-->
-<div class="Project-container">
-    <div class="Project-box-PNetFlix" onclick="showSummary('PNetFlix')">
-        <!-- <img src="PNetFlix.png" alt="PNetFlix Project"> -->
-        <p>PNetFlix</p>
+    <!-- Project Modals -->
+    <div id="PNetFlix-summary" class="modal">
+        <div class="modal-overlay" onclick="closeSummary('PNetFlix')"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeSummary('PNetFlix')">&times;</button>
+            <h2 class="modal-title">PNetFlix</h2>
+            <div class="modal-images">
+                <img src="Pss1.png" alt="PNetFlix Screenshot">
+            </div>
+            <p class="modal-description">
+                I built a treemultimap from scratch and used it to connect Netflix users to their previously watched movies, genres, directors and actors. I then used this data to recommend 5 new movies to each user selected from a database of over 40,000 movies.
+            </p>
+        </div>
     </div>
-    <div class="Project-box-PeachParty" onclick="showSummary('PeachParty')">
-        <p>PeachParty</p>
+
+    <div id="PeachParty-summary" class="modal">
+        <div class="modal-overlay" onclick="closeSummary('PeachParty')"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeSummary('PeachParty')">&times;</button>
+            <h2 class="modal-title">PeachParty</h2>
+            <div class="modal-images">
+                <img src="PE.png" alt="PeachParty Screenshot 1">
+                <img src="Pe6.png" alt="PeachParty Screenshot 2">
+            </div>
+            <p class="modal-description">
+                Peach Party is a two-player video game based off Mario Party. The players play on the same keyboard at the same time, dodging enemies, and rolling dice to travel around the game board. Players can land on event squares that trigger random actions such as teleporting a player to a random location or swapping locations with the opponent. A player can lose all their coins if they run into bowser or they can win the jackpot by landing directly on the bank square. The player with the most coins at the end of the time limit wins. I coded this using C++ Object-Oriented programming. I used over 10 classes with inheritance to code all of the characters and squares in the game.
+            </p>
+        </div>
     </div>
-    <div class="Project-box-CSCO" onclick="showSummary('CSCO')">
-        <p></p>
+
+    <div id="CSCO-summary" class="modal">
+        <div class="modal-overlay" onclick="closeSummary('CSCO')"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeSummary('CSCO')">&times;</button>
+            <h2 class="modal-title">CSCO</h2>
+            <div class="modal-images">
+                <img src="CSCO-Homepage2.png" alt="CSCO Homepage">
+                <img src="CSCO-posting-image.png" alt="CSCO Posting">
+            </div>
+            <p class="modal-description">
+                CSCO is a web app designed as a cross between Pinterest and VSCO. We created CSCO in a group of 5 and used MongoDB to store our data. You need to make an account and log in with the correct username and password to access the app. We added an AI component that generates captions after looking at the "vibe" of the image you posted. You can navigate to your Profile page to post images and also give them your own captions. The images you post will be able to be seen by all users on the Home page. If you want to delete a posted image from the platform, navigate back to your home page and hover over the specific image and press the 'x' to delete it.
+            </p>
+        </div>
     </div>
-</div>
 
-<!-- Summaries of Projects-->
-<div id="PNetFlix-summary" class="Project-summary">
-    <span class="close-btn" onclick="closeSummary('PNetFlix')">&times;</span>
-    <!-- <span class="close-btn" onclick="closeSummary('PNetFlix')">&times;</span> -->
-    <img src="Pss1.png" width="520px" height="300px">
-    <p>I built a treemultimap from scratch and used it to connect Netflix users to their 
-        previously watched movies, genres, directors and actors. I then used this data to recommend 
-        5 new movies to each user selected from a database of over 40,000 movies.</p>
-    <!-- Add more details and images as needed -->
-</div>
-
-<div id="PeachParty-summary" class="Project-summary">
-    <span class="close-btn" onclick="closeSummary('PeachParty')">&times;</span>
-    <img src="PE.png" width="300px" height="300px">
-    <img src="Pe6.png" width="300px" height="300px">
-    <p> Peach Party is a two-player video game based off Mario Party. The players play on the same 
-        keyboard at the same time, dodging enemies, and rolling dice to travel around the game board. Players
-         can land on event squares that trigger random actions such as teleporting a player to a random location or 
-         swapping locations with the opponent. A player can lose all their coins if they run into bowser or 
-         they can win the jackpot by landing directly on the bank square. The player with the most coins at the end of 
-         the time limit wins. I coded this using C++ Object-Oriented programming. I used over 10 classes 
-        with inheritance to code all of the characters and squares in the game.
-    </p>
-</div>
-
-<div id="CSCO-summary" class="Project-summary">
-    <span class="close-btn" onclick="closeSummary('CSCO')">&times;</span>
-    <img src="CSCO-Homepage2.png" width="300px" height="300px">
-    <img src="CSCO-posting-image.png" width="330px" height="300px">
-    <p>
-        CSCO is a web app designed as a cross between pinterest and VSCO. We created CSCO in a group of 5 and used MongoDB
-        to store our data. You need to make an account and log in with the correct username and password to access the app.
-        We added an AI component that generates captions after looking at the "vibe" of the image you posted. You can navigate to your
-        Profile page to post images and also give them your own captions. The images you post will be able to be seen by all
-        users on the Home page. If you want to delete a posted image from the platform, navigate back to your home page and 
-        hover over the specific image and press the 'x' to delete it. 
-    </p>
-</div>
-
-<p style ="font-size: 38px; color: whitesmoke; text-align: center; opacity: .75; margin-top: 30px; margin-bottom: 15px;"> Tennis </p>
-<div class="Tennis">
-    <video controls style="max-width: 100%;">
-        <source src="tennis_2.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-</div>
-
-
-<!-- Java Script Code for making the summary pop up-->
-<script>
-    function showSummary(projectId) {
-        var summary = document.getElementById(projectId + '-summary');
-        if (summary) {
-            summary.style.display = 'block';
+    <script>
+        function showSummary(projectId) {
+            const modal = document.getElementById(projectId + '-summary');
+            if (modal) {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
         }
-    }
 
-    function closeSummary(projectId) {
-        var summary = document.getElementById(projectId + '-summary');
-        if (summary) {
-            summary.style.display = 'none';
+        function closeSummary(projectId) {
+            const modal = document.getElementById(projectId + '-summary');
+            if (modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
         }
-    }
-</script>
 
-
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const activeModal = document.querySelector('.modal.active');
+                if (activeModal) {
+                    activeModal.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            }
+        });
+    </script>
 </body>
 </html>
